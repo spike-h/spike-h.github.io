@@ -1,0 +1,221 @@
+/**
+ * MODIFIED FROM THEMEFISHER TEMPLATE
+ * WEBSITE: https://themefisher.com
+ */
+
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+
+PROJECT:	FastRobots Page
+VERSION:	1.1
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TABLE OF CONTENTS]
+-------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,600,700|Work+Sans:400,700,800");
+html {
+  overflow-x: hidden;
+}
+
+
+p {
+  font-family: "Work Sans", sans-serif;
+  color: #000;
+}
+
+li {
+  font-family: "Work Sans", sans-serif;
+  color: #000;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Work Sans", sans-serif;
+  color: #000;
+  font-weight: 600;
+}
+
+h1, .h1 {
+  font-size: 45px;
+  text-transform: none;
+}
+
+h2, .h2 {
+  font-size: 36px;
+  line-height: 52px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+h4, .h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h5, .h5 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h6, .h6 {
+  font-size: 14px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.section {
+  padding: 120px 0px;
+}
+
+.section-sm {
+  padding: 60px 0px;
+}
+
+a {
+  color: #2551c0;
+  transition: all 0.25s ease;
+}
+a:hover {
+  color: #d8d8d8;
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+.bg-primary {
+  background: #d8d8d8 !important;
+}
+
+.bg-secondary {
+  background: #f7f7f7 !important;
+}
+
+.bg-extra {
+  background: #e8eefb !important;
+}
+
+.text-color {
+  color: #47daff;
+}
+
+.text-color-hover{
+  color: #000;
+  transition: all 0.2s ease-in-out;
+}
+.text-color-hover:hover {
+  color: #47daff;
+}
+
+.text-color-hover-light{
+  color: #a5a5a5;
+  transition: all 0.1s ease-in-out;
+}
+.text-color-hover-light:hover {
+  color: #47daff;
+}
+
+/* Styling for the Lab sub-tabs within the navigation */
+.tab-navigation .nav-link {
+    transition: border-bottom 0.3s ease;
+}
+
+/* Secondary highlight: Only apply blue to links that contain "lab" in the URL */
+.nav-link.active[href*="lab"] {
+    color: #47daff !important;
+    border-bottom: 3px solid #47daff !important;
+}
+
+/* Primary highlight: Keep the white border for "Home" or "Fast Robots" */
+.nav-link.active:not([href*="lab"]) {
+    border-bottom: 3px solid white !important;
+    color: white !important;
+}
+
+/* Limit the display size of all lab videos */
+video {
+    max-width: 100%;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto; /* Center the video */
+}
+
+/* Specific class for vertical/portrait videos like the temp sensor */
+.video-portrait {
+    max-width: 350px; /* Limits width on desktop */
+    max-height: 600px; /* Prevents it from being too tall */
+    width: auto;
+    height: auto;
+}
+
+/* Responsive adjustment for small phones */
+@media only screen and (max-width: 482px) {
+    .video-portrait {
+        max-width: 280px;
+    }
+}
+
+/* Specific class for vertical/portrait images like the temp sensor */
+/* Specific class for vertical/portrait images */
+.image-portrait {
+    max-width: 350px; 
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    display: block;    /* Required for margin: auto to work */
+    margin: 0 auto;    /* Centers the image horizontally */
+}
+
+/* Responsive adjustment for small phones */
+@media only screen and (max-width: 482px) {
+    .image-portrait {
+        max-width: 280px;
+    }
+}
+
+/* Container for the code block */
+pre {
+    /* background: #282c34;  */
+    padding: 5px 20px 5px 5px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(71, 218, 255, 0.1);
+    position: relative;
+    margin: 40px 0 20px 0;
+    overflow: visible; /* Allows the tab to pop out slightly */
+}
+
+/* The Language Banner/Tab */
+pre::before {
+    content: attr(data-lang); /* Pulls text from the HTML attribute */
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background: #a5a5a5; /* Your brand blue highlight */
+    color: #0f0e1a;      /* Dark text for high contrast */
+    padding: 2px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-family: 'Google Sans', sans-serif;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+pre:hover::before {
+    background: #47daff;
+    color: #0f0e1a;
+}
+
+/* Specific styling for the code within */
+pre code.hljs {
+    background: transparent !important;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}

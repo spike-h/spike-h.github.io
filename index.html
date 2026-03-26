@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en">
+	<!-- HEADER -->
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="author" content="Spike" />
+		<!-- <link rel="icon" href="icon.gif" type="image/gif" /> -->
+		<link rel="icon" href="img/me_circle.png" />
+		<title>Dyllan Portfolio</title>
+		<meta name="description" content="Portfolio of Dyllan Hofflich" />
+		<meta name="keywords" content="Portfolio, Dyllan Hofflich, web developer, projects, robotics, embedded, embedded systems," />
+		<link rel="canonical" href="https://spike-h.github.io/fastRobots/" />
+		<meta property="og:title" content="Dyllan Portfolio" />
+		<meta property="og:description" content="Portfolio of Dyllan Hofflich" />
+		<meta property="og:url" content="https://spike-h.github.io/fastRobots/" />
+		<meta property="og:type" content="website" />
+		<link href="css/GoogleSans/stylesheet.css" rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/e81c1695fe.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- PAGE WIPE ANIMATION -->
+		<div class="page-wipe">
+			<div class="wipe-line"></div>
+			<div class="wipe-line"></div>
+			<div class="wipe-line"></div>
+			<div class="wipe-line"></div>
+		</div>
+
+		<!-- TOP BANNER -->
+		<div class="top_banner">
+			<div
+				class="position-relative overflow-hidden p-3 p-md-5 top_banner_me text-light"
+			>
+				<div class="container">
+					<div class="container fade-in-content">
+						<div class="row h-50-mf">
+							<div class="col-lg-7 py-5 py-5-mobile-lesstop">
+								<br /><br />
+								<h1 style="font-weight: bolder" class="main_intro">
+									Hey, I'm Dyllan!
+								</h1>
+								<h2
+									style="font-weight: bold; margin-left: 3px"
+									class="main_subintro"
+								>
+									<span id="typed-output"></span>
+								</h2>
+								<br />
+								<p class="mobile_links_toppad">
+									<a
+										href="https://www.linkedin.com/in/dyllan-hofflich/"
+										class="btn btn-lg new_btn btn_white mx-1"
+										data-toggle="tooltip"
+										title="LinkedIn"
+										target="_blank"
+										><i class="fab fa-linkedin-in"></i
+									></a>
+									<a
+										href="https://github.com/spike-h"
+										class="btn btn-lg new_btn btn_white mx-1"
+										data-toggle="tooltip"
+										title="GitHub"
+										target="_blank"
+										><i class="fab fa-github"></i
+									></a>
+									<!--<a href="#" class="btn btn-lg new_btn btn_white mx-1 desktop_only" data-toggle="tooltip" title="Itch.io" target="_blank"><i class="fab fa-itch-io"></i></a>-->
+									<a
+										href="mailto:dyllanhofflich@gmail.com"
+										id="emailBtn"
+										class="btn btn-lg new_btn btn_white mx-1"
+										data-toggle="tooltip"
+										title="Email"
+									>
+										<i class="fa fa-envelope"></i>
+									</a>
+									<a
+										href=""
+										id="resumeBtn"
+										class="btn btn-lg new_btn btn_white mx-1"
+										data-toggle="tooltip"
+										title="Resume"
+									>
+										<i class="fa fa-file"></i>
+									</a>
+									<!-- <a href="Dyllan_Hofflich_Resume.pdf" class="btn btn-lg new_btn btn_white mx-1" data-toggle="tooltip" title="" target="_blank" data-bs-original-title="My CV" aria-label="My CV" style="line-height: 18px; font-weight: bold;">CV</a> -->
+								</p>
+								<br class="desktop_only" /><br class="desktop_only" />
+								<!-- image of me -->
+							</div>
+							<div class="col-lg-5 text-center">
+								<div class="profile-image-wrapper">
+									<img
+										src="img/me_circle.png"
+										alt="Picture of me"
+										class="top_banner_img"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- NAVIGATION TABS -->
+		<nav
+			class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark tab-navigation"
+			style="z-index: 1020"
+		>
+			<div class="tab-scroll-indicator tab-scroll-left" style="display: none">
+				<i class="fas fa-chevron-left"></i>
+			</div>
+			<div class="container-xxl">
+				<ul class="nav nav-tabs w-100" style="border-bottom: none">
+					<li
+						class="nav-item mobile_only"
+						style="width: 20px; flex-shrink: 0"
+					></li>
+					<li class="nav-item flex-fill text-center">
+						<a href="#" class="nav-link tab-link active" data-tab="aboutMe"
+							>About Me</a
+						>
+					</li>
+					<li class="nav-item flex-fill text-center">
+						<a href="#" class="nav-link tab-link" data-tab="fastRobots"
+							>Fast Robots - ECE5160</a
+						>
+					</li>
+					<!-- <li class="nav-item flex-fill text-center">
+						<a href="#" class="nav-link tab-link" data-tab="websites"
+							>Projects</a
+						>
+					</li> -->
+					<li
+						class="nav-item mobile_only"
+						style="width: 50px; flex-shrink: 0"
+					></li>
+				</ul>
+			</div>
+			<div class="tab-scroll-indicator tab-scroll-right" style="display: none">
+				<i class="fas fa-chevron-right"></i>
+			</div>
+		</nav>
+
+		<main>
+			<div class="container-xxl projects">
+				<div class="tab-content">
+					<div
+						class="tab-pane fade active"
+						id="aboutMe-tab"
+						role="tabpanel"
+						style="display: none"
+					>
+						<!-- ABOUT ME CONTENT -->
+						<div class="row">
+                     <div class="col-lg-8 offset-lg-2 text-center my-5">
+                        <h1>About Me</h1>
+                        <br></br>
+                        <p class="lead">
+                           Hello! I'm Dyllan, a Cornell M.Eng. student studying electrical and computer engineering
+                           with an interest in robotics, embedded systems, RTL design, and basically anything tech-related. 
+                           <!-- I also like rock climbing, Super Smash Bros, and volleyball. -->
+                        </p>
+                     </div>
+                  </div>
+                     </div>
+
+
+					<!-- FAST ROBOTS CONTENT -->
+<div class="tab-pane fade" id="fastRobots-tab" role="tabpanel"> 
+						<div class="row">
+							<!-- LAB 1 -->
+							<div class="col-xl-6 project_reveal">
+								<!-- <button
+									class="project_container"
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#lab1_modal"
+								> -->
+								<a
+    href="lab1.html"
+    class="project_container"
+    style="display: block; text-decoration: none;"
+>
+									<div class="hover-gif-container project_container_img" 
+     data-static="img/lab1/lab1Box_static.jpg" 
+     data-gif="img/lab1/lab1Box.gif">
+										<div class="project_platform_info_container">
+											<div class="project_platform_info">
+												<span class="badge bg-primary project_release_year"
+													>1-26-2026</span
+												>
+												<span class="badge bg-dark">Arduino C</span>
+												<span class="badge bg-dark">Bluetooth</span>
+											</div>
+										</div>
+									</div>
+									<div class="project_container_text">
+										<div>
+											<h2>Lab 1</h2>
+											<p>
+												Introduction to controlling Artemis Nano via Arduino IDE and Bluetooth with Jupyter notebooks.
+											</p>
+										</div>
+									</div>
+								<!-- </button> --> </a>
+							</div>
+
+<!-- LAB 2 -->
+<div class="col-xl-6 project_reveal">
+								<!-- <button
+									class="project_container"
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#lab1_modal"
+								> -->
+								<a
+    href="lab2.html"
+    class="project_container"
+    style="display: block; text-decoration: none;"
+>
+									<div class="hover-gif-container project_container_img" 
+     data-static="img/lab2/lab2Cover.webp" 
+     data-gif="img/lab2/lab2Cover.gif">
+										<div class="project_platform_info_container">
+											<div class="project_platform_info">
+												<span class="badge bg-primary project_release_year"
+													>2-14-2026</span
+												>
+												<span class="badge bg-dark">Arduino C</span>
+												<span class="badge bg-dark">Bluetooth</span>
+												<span class="badge bg-dark">IMU</span>
+											</div>
+										</div>
+									</div>
+									<div class="project_container_text">
+										<div>
+											<h2>Lab 2</h2>
+											<p>
+												IMU.
+											</p>
+										</div>
+									</div>
+								<!-- </button> --> </a>
+							</div>
+
+<div class="col-xl-6 project_reveal">
+								<!-- <button
+									class="project_container"
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#lab1_modal"
+								> -->
+								<a
+    href="lab3.html"
+    class="project_container"
+    style="display: block; text-decoration: none;"
+>
+									<div class="hover-gif-container project_container_img" 
+     data-static="img/lab3/lab3Cover.png" 
+     data-gif="img/lab3/lab3Cover.gif">
+										<div class="project_platform_info_container">
+											<div class="project_platform_info">
+												<span class="badge bg-primary project_release_year"
+													>2-24-2026</span
+												>
+												<span class="badge bg-dark">Arduino C</span>
+												<span class="badge bg-dark">Bluetooth</span>
+												<span class="badge bg-dark">Time of Flight Sensor</span>
+											</div>
+										</div>
+									</div>
+									<div class="project_container_text">
+										<div>
+											<h2>Lab 3</h2>
+											<p>
+												Using multiple time of flight sensors to measure distance to objects and test sensitivity to different colors and textures.
+											</p>
+										</div>
+									</div>
+								<!-- </button> --> </a>
+							</div>
+
+							<!-- LAB 4 -->
+
+<div class="col-xl-6 project_reveal">
+								<!-- <button
+									class="project_container"
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#lab1_modal"
+								> -->
+								<a
+    href="lab4.html"
+    class="project_container"
+    style="display: block; text-decoration: none;"
+>
+									<div class="hover-gif-container project_container_img" 
+     data-static="img/lab4/staticMoveSlow.png" 
+     data-gif="img/lab4/lab4Cover.gif">
+										<div class="project_platform_info_container">
+											<div class="project_platform_info">
+												<span class="badge bg-primary project_release_year"
+													>3-1-2026</span
+												>
+												<span class="badge bg-dark">Arduino C</span>
+												<span class="badge bg-dark">Bluetooth</span>
+												<span class="badge bg-dark">Motor Drivers</span>
+											</div>
+										</div>
+									</div>
+									<div class="project_container_text">
+										<div>
+											<h2>Lab 4</h2>
+											<p>
+												Using motor drivers to control motors of our RC car.
+											</p>
+										</div>
+									</div>
+								<!-- </button> --> </a>
+							</div>
+
+<div class="col-xl-6 project_reveal">
+								<!-- <button
+									class="project_container"
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#lab1_modal"
+								> -->
+								<a
+    href="lab5.html"
+    class="project_container"
+    style="display: block; text-decoration: none;"
+>
+									<div class="hover-gif-container project_container_img" 
+     data-static="img/lab5/lab5cover.jpg" 
+     data-gif="img/lab5/lab5cover.gif">
+										<div class="project_platform_info_container">
+											<div class="project_platform_info">
+												<span class="badge bg-primary project_release_year"
+													>3-1-2026</span
+												>
+												<span class="badge bg-dark">Arduino C</span>
+												<span class="badge bg-dark">Bluetooth</span>
+												<span class="badge bg-dark">Motor Drivers</span>
+											</div>
+										</div>
+									</div>
+									<div class="project_container_text">
+										<div>
+											<h2>Lab 5</h2>
+											<p>
+												Using PID to control forwards movement and position of the car.
+											</p>
+										</div>
+									</div>
+								<!-- </button> --> </a>
+							</div>
+
+<div class="col-xl-6 project_reveal">
+								<!-- <button
+									class="project_container"
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#lab1_modal"
+								> -->
+								<a
+    href="lab6.html"
+    class="project_container"
+    style="display: block; text-decoration: none;"
+>
+									<div class="hover-gif-container project_container_img" 
+     data-static="img/lab6/lab6Cover.jpg" 
+     data-gif="img/lab6/lab6Cover.gif">
+										<div class="project_platform_info_container">
+											<div class="project_platform_info">
+												<span class="badge bg-primary project_release_year"
+													>3-1-2026</span
+												>
+												<span class="badge bg-dark">Arduino C</span>
+												<span class="badge bg-dark">Bluetooth</span>
+												<span class="badge bg-dark">PID</span>
+											</div>
+										</div>
+									</div>
+									<div class="project_container_text">
+										<div>
+											<h2>Lab 6</h2>
+											<p>
+												Using PID to control angular position of the car.
+											</p>
+										</div>
+									</div>
+								<!-- </button> --> </a>
+							</div>
+
+							<!-- <div class="modal fade" id="lab1_modal" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title">Lab 1</h5>
+											<button
+												type="button"
+												class="btn-close"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+										</div>
+										<div class="modal-body">
+											<p>
+												Blank Filler Text hi whoever is reading this lol or me From
+												the future.
+											</p>
+											<a
+												href="https://github.com/spike-h"
+												target="_blank"
+												class="btn btn-secondary"
+												>Visit me on GitHub</a
+											>
+											<a
+												href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+												target="_blank"
+												class="btn btn-secondary"
+												>super important link</a
+											>
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+					</div>
+
+
+
+							<!-- <div class="col-xl-3 project_reveal">
+								<button
+									class="project_container"
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#stealthknight_modal"
+								>
+									<div class="stealthknight project_container_img">
+										<div class="project_platform_info_container">
+											<div class="project_platform_info">
+												<span class="badge bg-primary project_release_year"
+													>2020</span
+												>
+												<span class="badge bg-dark">Unity</span>
+												<span class="badge bg-dark">Windows</span>
+											</div>
+										</div>
+									</div>
+									<div class="project_container_text">
+										<div>
+											<h2>A Knightly Heist</h2>
+											<p>
+												A game where you play as a time travelling knight
+												stealing artefacts from a museum.
+											</p>
+										</div>
+									</div>
+								</button>
+							</div>
+							<div
+								class="modal fade"
+								id="stealthknight_modal"
+								aria-hidden="true"
+							>
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title">A Knightly Heist</h5>
+											<button
+												type="button"
+												class="btn-close"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											></button>
+										</div>
+										<div class="modal-body">
+											<p><img src="img/heist.png" width="100%" /></p>
+											<p>
+												Created in a team of six over a few days, this game
+												places you in the role of a knight who has travelled
+												into the future to steal artefacts from a museum.
+											</p>
+											<p>
+												The aim of the game is to collect as many artefacts as
+												possible and escape back through the portal before
+												you're caught by the guards.
+											</p>
+											<p>
+												This project was developed in just over a week as a game
+												jam in a team of 6.
+											</p>
+											<a
+												href=""
+												class="btn btn-secondary"
+												target="_blank"
+												>Download</a
+											>
+											<a
+												href=""
+												target="_blank"
+												class="btn btn-secondary"
+												>View Source on GitHub</a
+											>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							
+				</div>
+			</div>
+			<!-- <div class="container">
+				<div class="col-md-12 py-5" style="text-align: right">
+					<br />
+					<h3>
+						<a href="https://www.linkedin.com/in/dyllan-hofflich/"
+							><i class="fab fa-linkedin footer_links"></i
+						></a>
+						<a href="http://github.com/spike-h"
+							><i class="fab fa-github-square footer_links"></i
+						></a>
+						<a href="mailto:dyllanhofflich@gmail.com" target="_blank"
+							><i class="fa fa-envelope-square footer_links"></i
+						></a>
+					</h3>
+					<br /><br /><br /><br />
+				</div>
+			</div> -->
+		</main>
+
+		<div class="modal fade" id="emailModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content bg-dark text-light border-primary">
+					<div class="modal-header border-secondary">
+						<h5 class="modal-title">Get in Touch</h5>
+						<button
+							type="button"
+							class="btn-close btn-close-white"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body text-center">
+						<p>If your email client didn't open, you can reach me at:</p>
+						<h4>dyllanhofflich@gmail.com</h4>
+						<br />
+						<button
+							class="btn btn-outline-light btn-sm"
+							onclick="
+								navigator.clipboard.writeText('dyllanhofflich@gmail.com')
+							"
+						>
+							<i class="fas fa-copy"></i> Copy to Clipboard
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="resumeModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-centered">
+				<div class="modal-content bg-dark text-light border-primary">
+					<div class="modal-header border-secondary">
+						<h5 class="modal-title">Resume</h5>
+						<button
+							type="button"
+							class="btn-close btn-close-white"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="modal-body" style="padding: 0">
+						<iframe
+							src="Dyllan_Hofflich_Resume.pdf"
+							style="width: 100%; height: 70vh; border: none"
+							title="Resume PDF"
+						></iframe>
+					</div>
+					<div class="modal-footer border-secondary">
+						<a
+							href="Dyllan_Hofflich_Resume.pdf"
+							download
+							class="btn btn-outline-light"
+						>
+							<i class="fas fa-download"></i> Download PDF
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/youtube-optimise.js"></script>
+		<script src="js/parallax.min.js"></script>
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+		<!-- Tabs -->
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+
+				var tabNav = $(".tab-navigation");
+				tabNav.data("original-top", tabNav.offset().top);
+
+				var firstTab = $("#aboutMe-tab");
+				firstTab.css({
+					display: "block",
+					opacity: "0",
+					transition: "none",
+				});
+				setTimeout(function () {
+					firstTab.addClass("show active").css("transition", "").animate(
+						{
+							opacity: "1",
+						},
+						500,
+					);
+				}, 10);
+			});
+
+			$(document).ready(function () {
+				var tabNav = $(".tab-navigation");
+				var isDown = false;
+				var startX;
+				var scrollLeft;
+
+				tabNav.on("mousedown", function (e) {
+					isDown = true;
+					tabNav.addClass("active");
+					startX = e.pageX - tabNav.offset().left;
+					scrollLeft = tabNav.scrollLeft();
+				});
+				tabNav.on("mouseleave", function () {
+					isDown = false;
+					tabNav.removeClass("active");
+				});
+				tabNav.on("mouseup", function () {
+					isDown = false;
+					tabNav.removeClass("active");
+				});
+				tabNav.on("mousemove", function (e) {
+					if (!isDown) return;
+					e.preventDefault();
+					var x = e.pageX - tabNav.offset().left;
+					var walk = (x - startX) * 2;
+					tabNav.scrollLeft(scrollLeft - walk);
+				});
+
+				var touchStartX = 0;
+				var touchScrollLeft = 0;
+				tabNav.on("touchstart", function (e) {
+					touchStartX = e.originalEvent.touches[0].pageX;
+					touchScrollLeft = tabNav.scrollLeft();
+				});
+				tabNav.on("touchmove", function (e) {
+					var touchX = e.originalEvent.touches[0].pageX;
+					var diff = touchStartX - touchX;
+					tabNav.scrollLeft(touchScrollLeft + diff);
+				});
+
+				function updateScrollIndicators() {
+					var tabNav = $(".tab-navigation");
+					if (!tabNav.length || !tabNav[0]) return;
+
+					var scrollLeft = Math.round(tabNav.scrollLeft());
+					var scrollWidth = tabNav[0].scrollWidth;
+					var clientWidth = tabNav[0].clientWidth || tabNav.width();
+					var maxScroll = Math.max(0, Math.round(scrollWidth - clientWidth));
+
+					var leftIndicator = $(".tab-scroll-left");
+					var rightIndicator = $(".tab-scroll-right");
+
+					var tabNavOffset = tabNav.offset();
+					var tabNavHeight = tabNav.outerHeight();
+					var windowScroll = $(window).scrollTop();
+
+					var tabNavTop = tabNavOffset ? tabNavOffset.top - windowScroll : 0;
+					var isSticky = tabNavTop <= 0;
+					var arrowTop = isSticky ? 0 : tabNavTop;
+					leftIndicator.css({
+						top: arrowTop + "px",
+						height: tabNavHeight + "px",
+					});
+					rightIndicator.css({
+						top: arrowTop + "px",
+						height: tabNavHeight + "px",
+					});
+
+					var hasOverflow = scrollWidth > clientWidth;
+					if (!hasOverflow) {
+						leftIndicator.hide().removeClass("clickable");
+						rightIndicator.hide().removeClass("clickable");
+						return;
+					}
+
+					if (scrollLeft > 10) {
+						leftIndicator.show().addClass("clickable");
+					} else {
+						leftIndicator.hide().removeClass("clickable");
+					}
+
+					var isAtEnd = scrollLeft + 3 >= maxScroll;
+					if (maxScroll > 3 && !isAtEnd) {
+						rightIndicator.show().addClass("clickable");
+					} else {
+						rightIndicator.hide().removeClass("clickable");
+					}
+				}
+
+				$(window).on("scroll", function () {
+					updateScrollIndicators();
+				});
+
+				function scrollActiveTabIntoView() {
+					var activeTab = $(".tab-link.active");
+					if (activeTab.length) {
+						var tabNav = $(".tab-navigation");
+						var tabNavScrollLeft = tabNav.scrollLeft();
+						var tabNavWidth = tabNav.width();
+						var tabOffset = activeTab.offset().left - tabNav.offset().left;
+						var tabWidth = activeTab.outerWidth();
+
+						if (tabOffset < tabNavScrollLeft) {
+							tabNav.animate({ scrollLeft: tabOffset - 20 }, 300, function () {
+								updateScrollIndicators();
+							});
+						} else if (tabOffset + tabWidth > tabNavScrollLeft + tabNavWidth) {
+							tabNav.animate(
+								{ scrollLeft: tabOffset + tabWidth - tabNavWidth + 20 },
+								300,
+								function () {
+									updateScrollIndicators();
+								},
+							);
+						} else {
+							updateScrollIndicators();
+						}
+					} else {
+						updateScrollIndicators();
+					}
+				}
+
+				// Click handlers for scroll arrows
+				$(".tab-scroll-left").click(function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+					var tabNav = $(".tab-navigation");
+					tabNav.animate({ scrollLeft: 0 }, 300, function () {
+						updateScrollIndicators();
+					});
+				});
+
+				$(".tab-scroll-right").click(function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+					var tabNav = $(".tab-navigation");
+					var scrollWidth = tabNav[0].scrollWidth;
+					var clientWidth = tabNav[0].clientWidth || tabNav.width();
+					var maxScroll = Math.max(0, Math.round(scrollWidth - clientWidth));
+					tabNav.animate({ scrollLeft: maxScroll }, 300, function () {
+						updateScrollIndicators();
+					});
+				});
+
+				tabNav.on("scroll", function () {
+					requestAnimationFrame(function () {
+						updateScrollIndicators();
+					});
+				});
+
+				tabNav.on("touchend", function () {
+					setTimeout(function () {
+						updateScrollIndicators();
+					}, 50);
+				});
+
+				$(window).on("resize", function () {
+					setTimeout(updateScrollIndicators, 100);
+				});
+
+				setTimeout(updateScrollIndicators, 100);
+
+				$(".tab-link").click(function (e) {
+					e.preventDefault();
+
+					var targetTab = $(this).data("tab");
+					var newPane = $("#" + targetTab + "-tab");
+
+					if ($(this).hasClass("active")) {
+						var currentScroll = $(window).scrollTop();
+						var tabNav = $(".tab-navigation");
+						var tabNavOriginalTop =
+							tabNav.data("original-top") || tabNav.offset().top;
+						if (currentScroll > tabNavOriginalTop) {
+							var scrollPosition = Math.max(0, tabNavOriginalTop);
+							$("html, body").animate({ scrollTop: scrollPosition }, 300);
+						}
+						return;
+					}
+
+					$(".tab-link").removeClass("active");
+					$(this).addClass("active");
+
+					var currentPane = $(".tab-pane.show");
+					if (currentPane.length && currentPane[0] !== newPane[0]) {
+						currentPane.fadeOut(300, function () {
+							currentPane.removeClass("show active");
+							newPane.removeClass("show").css({
+								display: "block",
+								opacity: "0",
+								transition: "none",
+							});
+
+							setTimeout(function () {
+								newPane
+									.addClass("show active")
+									.css("transition", "")
+									.animate(
+										{
+											opacity: "1",
+										},
+										300,
+										function () {
+											var currentScroll = $(window).scrollTop();
+											var tabNav = $(".tab-navigation");
+											var tabNavOriginalTop =
+												tabNav.data("original-top") || tabNav.offset().top;
+											if (!tabNav.data("original-top")) {
+												tabNav.data("original-top", tabNavOriginalTop);
+											}
+											if (currentScroll > tabNavOriginalTop) {
+												var scrollPosition = Math.max(0, tabNavOriginalTop);
+												$("html, body").animate(
+													{ scrollTop: scrollPosition },
+													300,
+												);
+											}
+										},
+									);
+							}, 10);
+						});
+					} else {
+						currentPane.removeClass("show active");
+						newPane.removeClass("show").css({
+							display: "block",
+							opacity: "0",
+							transition: "none",
+						});
+
+						setTimeout(function () {
+							newPane
+								.addClass("show active")
+								.css("transition", "")
+								.animate(
+									{
+										opacity: "1",
+									},
+									300,
+									function () {
+										var currentScroll = $(window).scrollTop();
+										var tabNav = $(".tab-navigation");
+										var tabNavOriginalTop =
+											tabNav.data("original-top") || tabNav.offset().top;
+										if (!tabNav.data("original-top")) {
+											tabNav.data("original-top", tabNavOriginalTop);
+										}
+										if (currentScroll > tabNavOriginalTop) {
+											$("html, body").animate(
+												{ scrollTop: tabNavOriginalTop },
+												300,
+											);
+										}
+									},
+								);
+						}, 10);
+					}
+
+					setTimeout(function () {
+						scrollActiveTabIntoView();
+					}, 350);
+				});
+			});
+
+			$(document).ready(function () {
+				// Select both the top banner and footer email links
+				$('a[href^="mailto:"]').click(function (e) {
+					// Trigger the Bootstrap Modal
+					var emailModal = new bootstrap.Modal(
+						document.getElementById("emailModal"),
+					);
+					emailModal.show();
+
+					// We do NOT call e.preventDefault() so the browser still
+					// attempts to open the default mail app in the background.
+				});
+
+				// Handle resume button click
+				$("#resumeBtn").click(function (e) {
+					e.preventDefault();
+					var resumeModal = new bootstrap.Modal(
+						document.getElementById("resumeModal"),
+					);
+					resumeModal.show();
+				});
+			});
+
+			var typed = new Typed("#typed-output", {
+				strings: [
+					"Robotics Engineer",
+               "Cornell ECE M.Eng Student",
+					"Embedded Systems Engineer",
+					"RTL Designer",
+					"Rock and Tree Climber",
+				],
+				typeSpeed: 30, // Speed of typing
+				backSpeed: 30, // Speed of deleting
+				backDelay: 2000, // How long it stays typed before deleting
+				loop: true, // Keep cycling forever
+				cursorChar: "|", // The character used for the typing cursor
+            startDelay: 1600 // DELAY FOR TEXT TO START
+			});
+
+		$('.hover-gif-container').each(function() {
+    // Set the initial static background
+    var staticImg = $(this).data('static');
+    $(this).css('background-image', 'url(' + staticImg + ')');
+});
+
+$(document).ready(function () {
+    const isMobile = window.matchMedia("(max-width: 991px)").matches;
+
+    if (isMobile) {
+        // MOBILE LOGIC: Load GIF when scrolled into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5 // Trigger when 50% of the card is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const container = $(entry.target).find('.hover-gif-container');
+                const gifImg = container.data('gif');
+                const staticImg = container.data('static');
+
+                if (entry.isIntersecting) {
+                    // In view: Load and show GIF
+                    container.css('background-image', 'url(' + gifImg + ')');
+                } else {
+                    // Out of view: Revert to static to save memory
+                    container.css('background-image', 'url(' + staticImg + ')');
+                }
+            });
+        }, observerOptions);
+
+        $('.project_container').each(function() {
+            observer.observe(this);
+        });
+
+    } else {
+        // DESKTOP LOGIC: Keep your existing hover behavior
+        $('.project_container').hover(
+            function() {
+                var container = $(this).find('.hover-gif-container');
+                container.css('background-image', 'url(' + container.data('gif') + ')');
+            }, 
+            function() {
+                var container = $(this).find('.hover-gif-container');
+                container.css('background-image', 'url(' + container.data('static') + ')');
+            }
+        );
+    }
+});
+		</script>
+
+
+	</body>
+</html>

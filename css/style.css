@@ -1,0 +1,579 @@
+body {
+	font-family: "Google Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.page-wipe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 9999; /* Ensure it's above everything */
+    pointer-events: none; /* Allows clicking through once it moves */
+}
+
+.wipe-line {
+    flex: 1;
+    height: 100%;
+    background: #1267eb;
+    /* background: linear-gradient(to bottom, #1267eb, #0f0e1a); */
+    transform: translateY(0);
+    animation: wipeDown 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+/* DELAY FOR LINES WIPE */
+
+/* Stagger the lines for a more dynamic "wipe" look */
+.wipe-line:nth-child(2) { animation-delay: 0.1s; }
+.wipe-line:nth-child(3) { animation-delay: 0.2s; }
+.wipe-line:nth-child(4) { animation-delay: 0.3s; }
+
+@keyframes wipeDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Initial state: Hidden and slightly shifted down */
+.fade-in-content {
+    opacity: 0;
+    transform: translateY(20px); 
+    animation: contentFadeIn 1s ease-out forwards;
+    /* Delay this until the wipe lines are halfway down (approx 0.6s) */
+    animation-delay: 0.6s; 
+}
+
+/* DELAY FOR BANNER FADE */
+
+@keyframes contentFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the typing cursor */
+.typed-cursor {
+    color: #1267eb;
+    font-weight: normal;
+    animation: blink 0.7s infinite;
+    
+    /* Sync cursor visibility with the content fade-in */
+    opacity: 0;
+    animation: 
+        blink 0.7s infinite, 
+        cursorFadeIn 0.5s forwards;
+    animation-delay: 0s, 1.6s; /* Blink starts immediately, fade matches text */
+}
+/* DELAY FOR TEXT APPEARANCE */
+
+@keyframes cursorFadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Ensure the subintro has a consistent height so 
+   the page doesn't jump when lines delete */
+.main_subintro {
+    min-height: 1.5em; 
+    display: block;
+}
+
+/* Make the social buttons wait a bit longer */
+/* DELAY FOR BANNER FADE */
+.mobile_links_toppad {
+    opacity: 0;
+    animation: contentFadeIn 0.8s ease-out forwards;
+    animation-delay: 1s; /* Starts after the main headline begins fading */
+}
+
+/* Make the profile picture wait the longest */
+.profile-image-wrapper {
+    opacity: 0;
+    animation: contentFadeIn 1s ease-out forwards;
+    animation-delay: 1.2s; 
+}
+
+.top_banner {
+	/* background: linear-gradient(291deg, rgb(180, 223, 255) 0%, rgb(18 103 235) 100%); */
+	/* /* background-image: url("../img/bg_new.svg"); https://app.haikei.ap* */
+	/* background: rgba(15,14,26,1.0); */
+	background: linear-gradient(291deg, rgba(18,103,235,1.0) 0%,  rgba(15,14,26,1.0) 50%);
+	background-size: cover;
+    background-position: top center;
+}
+.top_banner_me {
+	background: none;
+	height: auto;
+}
+
+/* Container to hold the image and the spinning ring */
+.profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 10px; /* Space for the ring */
+}
+
+/* The Spinning Ring */
+.profile-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    /* Create a partial border for the 'spinning' effect */
+    border: 4px solid transparent;
+    border-top-color: #239441; 
+    border-bottom-color: #8aa685;
+    
+    /* The Animation */
+    animation: spin 3s linear infinite;
+}
+
+/* Define the spin movement */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Ensure the image stays circular and inside the ring */
+.top_banner_img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 50%;
+    position: relative; /* Sits above the pseudo-element ring */
+    z-index: 1;
+}
+
+/* .top_banner_img { */
+	/* display: none; */
+	/* width: 100%;
+	max-width: 450px;
+	border-radius: 50%;
+	margin: 20px auto; */
+	/* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+/* } */
+
+.new_btn {
+	font-size: 18px;
+	line-height: 0;
+}
+
+.new_btn:hover {
+	background: transparent;
+	color: white;
+}
+
+.btn_white {
+	background: rgba(255, 255, 255, 0.9);
+	color: #343a40;
+	border: 2px solid white;
+}
+
+.btn_white:hover {
+	color: white;
+}
+
+.btn_black {
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+	border: 2px solid black;
+}
+
+.btn_black:hover {
+	color: black;
+}
+
+@media only screen and (max-width: 1350px) {
+	/* .top_banner_me {
+		background-position: right -226px bottom -40px;
+	} */
+}
+
+@media only screen and (max-width: 482px) {
+	.supersmall_hide {
+		display: none;
+	}
+
+	.main_intro {
+		font-size: 40px !important;
+	}
+
+	.main_subintro {
+		font-size: 20px;
+	}
+
+	.mobile_fullwidth>img {
+		display: none;
+	}
+
+	.mobile_fullwidth>h1 {
+		font-size: 30px;
+	}
+
+	.mobile_fullwidth>h5 {
+		font-size: 17px;
+	}
+
+	.divider {
+		height: 20px;
+	}
+
+	.nav-link {
+		padding: 0.20rem 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.supersmall_only {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.desktop_only {
+		display: none;
+	}
+
+	.mobile_fullwidth {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.main_intro {
+		font-size: 60px;
+	}
+
+	.top_banner {
+		background-position: top right;
+		height:auto;
+	}
+	.top_banner_me {
+		height:auto;
+		background: none;
+		/* background-size: 40vh;
+		background-position: center right +20px; */
+	}
+	.top_banner_subtext_mobilevis {
+		display: unset !important;
+	}
+	.mobile_links_toppad {
+		padding-top:10px;
+	}
+
+	.py-5-mobile-lesstop {
+		padding-top: 16px !important;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	.project_container_text {
+		height: 100% !important;
+	}
+
+	.project_container {
+		margin-left: 100px;
+		margin-right: 100px;
+		width: calc(100% - 200px) !important;
+	}
+}
+
+@media only screen and (max-width: 1002px) {
+	.hide_on_shrink {
+		display:none !important;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.project_container {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100% !important;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.mobile_only {
+		display: none;
+	}
+
+	.main_intro {
+		font-size: 70px;
+	}
+}
+
+.projects {
+	margin-top: 20px;
+}
+
+.project_container {
+	border-radius: 25px;
+	background-color: #343a40 ;
+	overflow: hidden;
+	color: white;
+	text-align: center;
+	margin-bottom: 20px;
+	padding: 0;
+	border: 0;
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+	width: 100%;
+	display: block;         /* Ensures the link fills the column width */
+    text-decoration: none;  /* Removes underlines from the titles */
+}
+
+.project_container:hover {
+	-webkit-box-shadow: 0px 0px 75px -10px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 75px -10px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 75px -10px rgba(0, 0, 0, 0.25);
+	transform: scale(1.01);
+	color: white;
+    text-decoration: none;
+}
+
+.project_container_img {
+	min-width: 100%;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+}
+
+.project_container_text {
+	margin: 20px;
+	height: 130px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.project_container_text>div>p {
+	margin-bottom: 0;
+}
+
+.project_platform_info_container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	position: relative;
+}
+
+.project_platform_info {
+	margin: 20px;
+}
+
+.project_release_year {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.project_external_link {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
+.section_header {
+	text-align: center;
+}
+
+.embed-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	border-radius: 0.25rem;
+	background: #ededed;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed,
+.embed-container img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.embed-container i {
+	position: absolute;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+	font-size: 50px;
+	color: white;
+	text-shadow: 0px 0px 12px rgba(0, 0, 0, 1);
+}
+
+
+.footer_links {
+	color: black;
+}
+
+.footer_links:hover {
+	color: grey;
+}
+
+
+.hover-gif-container {
+    background-size: cover;
+    background-position: center;
+    /* Smoothly fade between static and gif states */
+    transition: background-image 0.4s ease-in-out; 
+    will-change: background-image;
+}
+
+.navbar {
+	height: 70px;
+}
+
+.navbar-collapse {
+	background: #363636;
+}
+
+.nav-link {
+	color: lightgrey;
+}
+
+.nav-link:hover {
+	color: white;
+}
+
+.tab-navigation {
+	background: #363636 !important;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none; 
+	-ms-overflow-style: none; 
+}
+
+.tab-navigation::-webkit-scrollbar {
+	display: none;
+}
+
+.tab-scroll-indicator {
+	position: fixed;
+	top: auto;
+	bottom: auto;
+	width: 40px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+	z-index: 1021;
+	color: white;
+	font-size: 18px;
+	transition: opacity 0.3s ease;
+}
+
+.tab-scroll-indicator.tab-scroll-left {
+	left: 0;
+	background: linear-gradient(to right, rgba(51, 51, 51, 0.9), transparent);
+}
+
+.tab-scroll-indicator.tab-scroll-right {
+	right: 0;
+	background: linear-gradient(to left, rgba(51, 51, 51, 0.9), transparent);
+}
+
+.tab-scroll-indicator.clickable {
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.tab-scroll-indicator.clickable:hover {
+	opacity: 0.8;
+}
+
+.tab-navigation .nav-tabs {
+	border-bottom: none;
+	flex-wrap: nowrap;
+	white-space: nowrap;
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.tab-navigation .nav-link {
+	color: lightgrey;
+	border: none;
+	border-radius: 0;
+	padding: 15px 20px;
+	transition: all 0.3s ease;
+	white-space: nowrap;
+	flex-shrink: 0;
+	font-weight: bold;
+}
+
+.tab-navigation .nav-link:hover {
+	color: white;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-navigation .nav-link.active {
+	color: white;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-bottom: 3px solid white;
+}
+
+.tab-content {
+	min-height: 100vh;
+}
+
+.tab-pane {
+	display: none !important;
+	padding-top: 40px;
+}
+
+.tab-pane.show {
+	display: block !important;
+}
+
+.tab-pane.fade {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.tab-pane.fade.show {
+	opacity: 1;
+}
+
+.tab-pane.fade.show.active {
+	display: block !important;
+	opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+	.tab-navigation .nav-link {
+		padding: 10px 5px;
+		font-size: 14px;
+	}
+	
+	.tab-navigation .nav-item {
+		margin-right: 10px;
+	}
+	
+	.tab-navigation .nav-item:last-child {
+		margin-right: 0;
+	}
+}
+
+
+/* --- FASS Template Integration --- */
