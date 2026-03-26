@@ -1,4 +1,4 @@
-website at https://spike-h.github.io/fastRobots/
+website at [https://spike-h.github.io/fastRobots/](https://spike-h.github.io/website/)
 
 inspired by:
 https://mattfiler.co.uk/
