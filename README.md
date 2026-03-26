@@ -1,4 +1,4 @@
-website at https://spike-h.github.io/website/
+website at https://spike-h.github.io
 
 inspired by:
 https://mattfiler.co.uk/
