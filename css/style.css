@@ -575,5 +575,54 @@ body {
 	}
 }
 
+/* High-Contrast Glass Cards */
+.experience-card-link {
+    text-decoration: none !important;
+    display: block;
+    margin-bottom: 20px;
+}
 
+.experience-card {
+    /* Use a darker semi-transparent background to ensure white text is readable */
+    background: rgba(15, 14, 26, 0.85) !important; 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(71, 218, 255, 0.2) !important; /* Subtle brand blue border */
+    border-radius: 15px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.experience-card-link:hover .experience-card {
+    background: rgba(15, 14, 26, 0.95) !important;
+    border: 1px solid rgba(71, 218, 255, 0.6) !important; 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Explicitly set title colors to bypass parent white-background overrides */
+.experience-card h3, 
+.experience-card h4 {
+    color: #ffffff !important;
+}
+
+.card-company {
+    color: #47daff !important; /* Your brand blue */
+    font-weight: 600;
+}
+
+.card-date {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.9rem;
+}
+
+.experience-card .card-text {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.skill-pill {
+    background: rgba(71, 218, 255, 0.15) !important;
+    color: #47daff !important;
+    border: 1px solid rgba(71, 218, 255, 0.4);
+    font-weight: 500;
+}
 /* --- FASS Template Integration --- */
